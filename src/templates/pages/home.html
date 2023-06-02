@@ -1,0 +1,20 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="mb-5">Expense Tracker</h1>
+        {% for inf in information %}
+            <div class="mt-3">
+                    <p>Category: {{ inf.category }}, Description: {{ inf.description }}, Amount: {{ inf.amount }}</p>
+            </div>
+        {% endfor %}
+        <div class="mt-5">
+            <hr>
+            <p>Total expenses: {{ total }}</p>
+            <div>
+                <a href="/page_create" class="me-3">+ Add New Expense</a>
+                <a href="/graphics">View Stats</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+body, html, .project_body {
+  height: 100%;
+}
+
+a {
+    color: white
+}
+
+a:hover {
+    color: gray
+}

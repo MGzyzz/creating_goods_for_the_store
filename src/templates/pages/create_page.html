@@ -1,0 +1,31 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Add new Expense</h1>
+    <form action="/" method="post">
+        <div class="mb-3 row">
+            <label for="inputCategory" class="col-sm-2 col-form-label">Category</label>
+            <select class="form-select" aria-label="Default select example" style="margin-left: 11px; width: 1076px" name="category" id="inputCategory">
+                <option value="Food">Food</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Car">Car</option>
+            </select>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputName" class="col-sm-2 col-form-label">Description</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputName" name="description" required>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputDescription" class="col-sm-2 col-form-label">Amount</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="inputDescription" name="amount">
+            </div>
+        </div>
+        <button class="btn btn-success">Create</button>
+    </form>
+</div>
+{% endblock %}
